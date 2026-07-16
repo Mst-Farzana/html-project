@@ -17,21 +17,24 @@
 :root {
   scroll-behavior: smooth;
 }
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
-  color: var(
-    --default-color
-  ); /* ✅ 'black' এর বদলে ভেরিয়েবল ব্যবহার করা হয়েছে */
+  color: var(--default-color);
 }
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
 
+/* =========================================
+   NAVIGATION & DROPDOWN STYLES
+   ========================================= */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -46,13 +49,10 @@ body {
   position: relative;
   margin-right: 10px;
 }
-
 .nav-menu-item ul li a {
   text-decoration: none;
   transition: 0.3s;
 }
-
-/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
 .nav-menu-item ul li a:hover,
 .nav-menu-item ul li a:focus {
   color: var(--accent-color);
@@ -88,7 +88,6 @@ h6 {
 .header .header-social-links {
   padding-right: 15px;
 }
-
 .header-social-links .btn {
   display: inline-block;
   transition: 0.3s;
@@ -101,25 +100,22 @@ h6 {
   background-color: #e9e8e6;
   padding: 5px;
 }
-
 .header .header-social-links .btn:hover {
   color: var(--accent-color);
 }
 
 /* =========================================
-   ✅ WORKING DROPDOWN STYLES (ADDED)
+   DROPDOWN STYLES
    ========================================= */
 .dropdown {
   position: relative;
 }
-
 .dropdown-btn {
   display: flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
 }
-
 .dropdown-menu {
   display: none !important;
   position: absolute;
@@ -133,17 +129,14 @@ h6 {
   z-index: 9999;
   margin-top: 10px;
 }
-
 .dropdown-menu.show {
   display: block !important;
   animation: fadeIn 0.2s ease-in-out;
 }
-
 .dropdown-menu li {
   display: block;
   margin: 0;
 }
-
 .dropdown-menu li a {
   display: block;
   padding: 12px 20px;
@@ -152,13 +145,11 @@ h6 {
   font-size: 14px;
   transition: all 0.3s ease;
 }
-
 .dropdown-menu li a:hover {
   background-color: var(--accent-color);
   color: #ffffff !important;
   padding-left: 25px;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -169,11 +160,10 @@ h6 {
     transform: translateY(0);
   }
 }
-/* =========================================
-   END DROPDOWN STYLES
-   ========================================= */
 
-/* main start */
+/* =========================================
+   CONTACT SECTION - FULLY FIXED
+   ========================================= */
 .container-section-title {
   margin: 30px auto;
   padding: 20px;
@@ -192,121 +182,194 @@ h6 {
   margin: 20px auto;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেসের জন্য যোগ করা হয়েছে */
+  flex-wrap: wrap;
   max-width: 1200px;
+  gap: 30px;
 }
 
 .right-side,
 .left-side {
-  margin: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 300px;
   padding: 2rem;
-  border-radius: 8px; /* ✅ সুন্দর লুকের জন্য রাউন্ড কর্নার */
-}
-
-.right-side {
-  flex: 1 1 500px; /* ✅ রেসপন্সিভ ফ্লেক্স */
-  color: rgb(139, 156, 172);
-  transition-duration: 0.3s;
+  border-radius: 8px;
 }
 
 .left-side {
-  flex: 1 1 300px; /* ✅ রেসপন্সিভ ফ্লেক্স */
-  margin-left: 2rem;
+  background: #f8f9fa;
 }
 
+.right-side {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Left side - Contact Info */
 .style-icon {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: center; /* ✅ আইকন এবং টেক্সট মাঝখানে অ্যালাইন */
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 15px 0;
+}
+
+.style-icon:first-child {
+  margin-top: 0;
 }
 
 .style-icon i {
   background-color: #c4ede8;
   color: var(--accent-color);
-  padding: 15px;
-  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
   transition: all 0.3s;
+}
+
+.style-icon div {
+  flex: 1;
+}
+
+.style-icon h3 {
+  font-size: 1.1rem;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
 .style-icon p {
   margin: 0;
   color: var(--default-color);
-  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .style-icon i:hover {
   background-color: var(--accent-color);
   color: #ffffff;
+  transform: scale(1.1);
 }
 
+/* Right side - Form */
 .name-email {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
-  color: lightslategray;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .input-item {
   flex: 1;
-  margin-right: 15px;
-  min-width: 200px; /* ✅ ছোট স্ক্রিনে ভেঙে যাওয়া রোধ করতে */
+  min-width: 200px;
 }
 
-.input-item:last-child {
-  margin-right: 0;
-}
-
-.name-email label,
+.input-item label,
 .input-item-sub label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  margin-bottom: 8px;
+  font-weight: 600;
   color: var(--heading-color);
+  font-size: 0.95rem;
 }
 
-.name-email input,
+.input-item input,
 .input-item-sub input,
 .input-item-sub textarea {
-  display: block;
-  width: 100%; /* ✅ ফুল উইডথ */
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid rgb(164, 161, 161);
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #d4d4d4;
   border-radius: 5px;
   font-family: var(--default-font);
-  transition: border-color 0.3s;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  box-sizing: border-box;
 }
 
-.name-email input:focus,
+.input-item input:hover,
+.input-item-sub input:hover,
+.input-item-sub textarea:hover {
+  border-color: var(--accent-color);
+}
+
+.input-item input:focus,
 .input-item-sub input:focus,
 .input-item-sub textarea:focus {
   outline: none;
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(52, 183, 167, 0.1);
 }
 
+.input-item-sub {
+  margin-bottom: 20px;
+}
+
+.input-item-sub textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Submit Button */
 .right-side .btn {
   background-color: var(--accent-color);
   border: none;
-  margin: 20px auto 0;
-  display: block;
-  padding: 15px 30px;
+  padding: 15px 40px;
   border-radius: 25px;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .right-side .btn:hover {
-  background-color: #2a9a8c; /* ✅ হোভারের জন্য একটু গাঢ় রং */
+  background-color: #2a9a8c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(52, 183, 167, 0.3);
 }
 
-/* footer start */
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .name-email {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .style-icon {
+    gap: 15px;
+  }
+
+  .style-icon i {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
 #footer {
   text-align: center;
   padding: 25px;
@@ -317,9 +380,9 @@ h6 {
   font-size: 20px;
   margin: 10px;
   padding: 15px;
-  background: #ffffff; /* ✅ কনট্রাস্টের জন্য সাদা ব্যাকগ্রাউন্ড */
+  background: #ffffff;
   box-sizing: border-box;
-  border: grey 1px solid;
+  border: 1px solid grey;
   border-radius: 100px;
   transition: all 0.3s;
 }
@@ -328,4 +391,3 @@ h6 {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
-/* footer end */
