@@ -1,0 +1,331 @@
+:root {
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #222222;
+  --accent-color: #34b7a7;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+:root {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(
+    --default-color
+  ); /* ✅ 'black' এর বদলে ভেরিয়েবল ব্যবহার করা হয়েছে */
+}
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+.nav-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.nav-menu-item ul {
+  display: flex;
+}
+.nav-menu-item ul li {
+  display: flex;
+  position: relative;
+  margin-right: 10px;
+}
+
+.nav-menu-item ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
+.nav-menu-item ul li a:hover,
+.nav-menu-item ul li a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: var(--accent-color);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.header {
+  color: var(--default-color);
+  background-color: #e9e8e6;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header-social-links .btn {
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.header-social-links .btn i {
+  background-color: #e9e8e6;
+  padding: 5px;
+}
+
+.header .header-social-links .btn:hover {
+  color: var(--accent-color);
+}
+
+/* =========================================
+   ✅ WORKING DROPDOWN STYLES (ADDED)
+   ========================================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--surface-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 9999;
+  margin-top: 10px;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--default-color) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  padding-left: 25px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* =========================================
+   END DROPDOWN STYLES
+   ========================================= */
+
+/* main start */
+.container-section-title {
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.hr-line hr {
+  border-bottom: 4px var(--accent-color) solid;
+  border-top: none;
+  height: 1px;
+  width: 50px;
+  margin: 10px auto;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেসের জন্য যোগ করা হয়েছে */
+  max-width: 1200px;
+}
+
+.right-side,
+.left-side {
+  margin: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  border-radius: 8px; /* ✅ সুন্দর লুকের জন্য রাউন্ড কর্নার */
+}
+
+.right-side {
+  flex: 1 1 500px; /* ✅ রেসপন্সিভ ফ্লেক্স */
+  color: rgb(139, 156, 172);
+  transition-duration: 0.3s;
+}
+
+.left-side {
+  flex: 1 1 300px; /* ✅ রেসপন্সিভ ফ্লেক্স */
+  margin-left: 2rem;
+}
+
+.style-icon {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.style-icon i {
+  background-color: #c4ede8;
+  color: var(--accent-color);
+  padding: 15px;
+  margin-right: 15px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.style-icon p {
+  margin: 0;
+  color: var(--default-color);
+  font-weight: 500;
+}
+
+.style-icon i:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.name-email {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+  color: lightslategray;
+}
+
+.input-item {
+  flex: 1;
+  margin-right: 15px;
+  min-width: 200px; /* ✅ ছোট স্ক্রিনে ভেঙে যাওয়া রোধ করতে */
+}
+
+.input-item:last-child {
+  margin-right: 0;
+}
+
+.name-email label,
+.input-item-sub label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+
+.name-email input,
+.input-item-sub input,
+.input-item-sub textarea {
+  display: block;
+  width: 100%; /* ✅ ফুল উইডথ */
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid rgb(164, 161, 161);
+  border-radius: 5px;
+  font-family: var(--default-font);
+  transition: border-color 0.3s;
+}
+
+.name-email input:focus,
+.input-item-sub input:focus,
+.input-item-sub textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.right-side .btn {
+  background-color: var(--accent-color);
+  border: none;
+  margin: 20px auto 0;
+  display: block;
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.right-side .btn:hover {
+  background-color: #2a9a8c; /* ✅ হোভারের জন্য একটু গাঢ় রং */
+}
+
+/* footer start */
+#footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #e9e8e6;
+}
+
+#footer .social-links i {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  background: #ffffff; /* ✅ কনট্রাস্টের জন্য সাদা ব্যাকগ্রাউন্ড */
+  box-sizing: border-box;
+  border: grey 1px solid;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+#footer .social-links a i:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+/* footer end */

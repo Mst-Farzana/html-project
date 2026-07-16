@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Me - Kelly Adams | Professional Illustrator</title>
+
+    <!-- ✅ SEO Meta Tags (Filled for About Page) -->
+    <meta
+      name="description"
+      content="Learn more about Kelly Adams, a professional UI/UX Designer and Web Developer. Explore my skills, background, and client testimonials."
+    />
+    <meta
+      name="keywords"
+      content="UI/UX designer, web developer, portfolio, about me, skills, testimonials, Kelly Adams"
+    />
+    <meta name="author" content="Kelly Adams" />
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- ✅ Optimized Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Style CSS File -->
+    <link rel="stylesheet" href="css/about.css" />
+
+    <!-- ✅ JavaScript for Dropdown -->
+    <script src="js/index.js" defer></script>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header">
+      <div class="nav-main-top">
+        <div class="nav-side-heding">
+          <a href="index.html" aria-label="Go to Home">
+            <h1 class="sitename">Kelly</h1>
+          </a>
+        </div>
+
+        <nav class="nav-menu-item" aria-label="Main Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- ✅ Active class moved to About -->
+            <li><a href="about.html" class="active" aria-current="page">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+
+            <!-- ✅ WORKING DROPDOWN STRUCTURE -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-btn"> Dropdown <i class="fa-solid fa-caret-down"></i> </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+            <!-- ✅ END DROPDOWN -->
+
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- ✅ Fixed Social Links (Proper anchor tags instead of broken buttons) -->
+        <div class="header-social-links">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Twitter"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a
+            href="https://facebook.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="about-section-title">
+          <h2>About</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <!-- ✅ Fixed inline style syntax -->
+        <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem">
+          <div class="about-main">
+            <div class="about-img">
+              <!-- ✅ Fixed width attribute (removed 'px') -->
+              <img
+                src="img/profile-img.jpg"
+                alt="Profile picture of Kelly Adams"
+                width="300"
+                height="auto"
+              />
+            </div>
+            <div class="about-main-right">
+              <h2>UI/UX Designer &amp; Web Developer.</h2>
+              <p>
+                <em
+                  >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua.</em
+                >
+              </p>
+
+              <div class="main-right-middle">
+                <div class="about-main-right-left">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Phone:</strong>
+                      <span>+123 456 7890</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>City:</strong>
+                      <span>New York, USA</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Birthday:</strong>
+                      <span>1 May 1995</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Website:</strong>
+                      <span>www.example.com</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="about-main-right-right">
+                  <ul>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Age:</strong>
+                      <span>30</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Degree:</strong>
+                      <span>Master</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Email:</strong>
+                      <span>email@example.com</span>
+                    </li>
+                    <li>
+                      <i class="fa-solid fa-chevron-right"></i> <strong>Freelance:</strong>
+                      <span>Available</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam
+                sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius
+                omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia
+                repellendus itaque neque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
+        <div class="about-section-title">
+          <h2>Skills</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <!-- ✅ Fixed class naming and removed extra closing div -->
+        <div class="skills-item">
+          <div class="skills-content-left">
+            <ul>
+              <li class="html">
+                <div class="list-item"><span>HTML</span> <span>100%</span></div>
+              </li>
+              <li class="css">
+                <div class="list-item"><span>CSS</span> <span>90%</span></div>
+              </li>
+              <li class="javascript">
+                <div class="list-item"><span>Javascript</span> <span>75%</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="skills-content-right">
+            <ul>
+              <li class="php">
+                <div class="list-item"><span>PHP</span> <span>80%</span></div>
+              </li>
+              <li class="wordpress">
+                <div class="list-item"><span>Wordpress/CMS</span> <span>90%</span></div>
+              </li>
+              <li class="photoshop">
+                <div class="list-item"><span>PhotoShop</span> <span>55%</span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section id="stats" class="stats section">
+        <div class="about-section-title">
+          <h2>Facts</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <!-- ✅ Fixed typo: aniation-count -> animation-count -->
+        <div class="section-content">
+          <div class="about-section-title">
+            <h2 class="animation-count">232</h2>
+            <p>Clients</p>
+          </div>
+          <div class="about-section-title">
+            <h2>521</h2>
+            <p>Projects</p>
+          </div>
+          <div class="about-section-title">
+            <h2>1453</h2>
+            <p>Hours Of Support</p>
+          </div>
+          <div class="about-section-title">
+            <h2>32</h2>
+            <p>Workers</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section">
+        <div class="about-section-title">
+          <h2>Testimonials</h2>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <!-- ✅ Fixed duplicate class attributes -->
+        <div id="saul-goodman" class="side-bar-item">
+          <div class="testimonial-item">
+            <img
+              src="img/testimonials/testimonials-1.png"
+              class="testimonial-img"
+              width="200"
+              alt="Saul Goodman"
+            />
+            <h3>Saul Goodman</h3>
+            <h4>CEO &amp; Founder</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              <i class="fa-solid fa-quote-left" style="color: rgb(61, 130, 155)"></i>
+              <span
+                >Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                risus at semper.</span
+              >
+              <i class="fa-solid fa-quote-right" style="color: rgb(61, 130, 155)"></i>
+            </p>
+          </div>
+        </div>
+
+        <div id="Sara-Wilsson" class="side-bar-item hidden-item">
+          <div class="testimonial-item">
+            <img
+              src="img/testimonials/testimonials-2.png"
+              class="testimonial-img"
+              width="200"
+              alt="Sara Wilsson"
+            />
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              <i class="fa-solid fa-quote-left" style="color: rgb(61, 130, 155)"></i>
+              <span
+                >Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                legam anim culpa.</span
+              >
+              <i class="fa-solid fa-quote-right" style="color: rgb(61, 130, 155)"></i>
+            </p>
+          </div>
+        </div>
+
+        <div id="Jena-Karlis" class="side-bar-item hidden-item">
+          <div class="testimonial-item">
+            <img
+              src="img/testimonials/testimonials-3.png"
+              class="testimonial-img"
+              width="200"
+              alt="Jena Karlis"
+            />
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              <i class="fa-solid fa-quote-left" style="color: rgb(61, 130, 155)"></i>
+              <span
+                >Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
+                veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
+                minim.</span
+              >
+              <i class="fa-solid fa-quote-right" style="color: rgb(61, 130, 155)"></i>
+            </p>
+          </div>
+        </div>
+
+        <div id="Matt-Brandon" class="side-bar-item hidden-item">
+          <div class="testimonial-item">
+            <img
+              src="img/testimonials/testimonials-4.png"
+              class="testimonial-img"
+              width="200"
+              alt="Matt Brandon"
+            />
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              <i class="fa-solid fa-quote-left" style="color: rgb(61, 130, 155)"></i>
+              <span
+                >Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
+                dolore labore illum veniam.</span
+              >
+              <i class="fa-solid fa-quote-right" style="color: rgb(61, 130, 155)"></i>
+            </p>
+          </div>
+        </div>
+
+        <div id="John-Larson" class="side-bar-item hidden-item">
+          <div class="testimonial-item">
+            <img
+              src="img/testimonials/testimonials-5.png"
+              class="testimonial-img"
+              width="200"
+              alt="John Larson"
+            />
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <p>
+              <i class="fa-solid fa-quote-left" style="color: rgb(61, 130, 155)"></i>
+              <span
+                >Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                culpa fore nisi cillum quid.</span
+              >
+              <i class="fa-solid fa-quote-right" style="color: rgb(61, 130, 155)"></i>
+            </p>
+          </div>
+        </div>
+
+        <!-- ✅ Fixed broken link typo (#John-Larson r -> #John-Larson) -->
+        <div class="side-bar-page">
+          <a href="#saul-goodman" aria-label="Go to Saul Goodman"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+          <a href="#Sara-Wilsson" aria-label="Go to Sara Wilsson"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+          <a href="#Jena-Karlis" aria-label="Go to Jena Karlis"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+          <a href="#Matt-Brandon" aria-label="Go to Matt Brandon"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+          <a href="#John-Larson" aria-label="Go to John Larson"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright-text">
+          <p>
+            &copy; <span id="current-year">2024</span> <strong class="px-1 sitename">Kelly</strong>.
+            All Rights Reserved.
+          </p>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a
+            href="https://facebook.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <!-- ✅ Fixed broken HTML tag for ThemeWagon -->
+        <div class="credits">
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> |
+          Distributed by
+          <a href="https://themewagon.com" target="_blank" rel="noopener">ThemeWagon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true"></div>
+
+    <!-- ✅ Auto-update copyright year script -->
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

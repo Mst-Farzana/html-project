@@ -1,0 +1,214 @@
+:root {
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #222222;
+  --accent-color: #34b7a7;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+:root {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+.nav-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.nav-menu-item ul {
+  display: flex;
+  position: relative;
+}
+.nav-menu-item ul li {
+  display: flex;
+  margin-right: 10px;
+}
+
+.nav-menu-item ul ul {
+  position: absolute;
+  margin-top: 0;
+  display: block;
+  top: 100%;
+  left: 0;
+}
+.nav-menu-item ul ul li {
+  display: block;
+  margin-top: 0;
+}
+
+.nav-menu-item ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-menu-item ul li a:hover,
+.nav-menu-item ul li a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: var(--accent-color);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header-social-links .btn {
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+  border: none;
+}
+.header-social-links .btn i {
+  background-color: white;
+  padding: 5px;
+}
+
+.header .header-social-links .btn:hover {
+  color: var(--accent-color);
+}
+
+#hero {
+  position: relative;
+}
+#hero img {
+  width: 100%;
+  height: 50%;
+}
+.hero-text-area {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 30%;
+}
+.hero-text-area h2 {
+  font-size: 40px;
+}
+.hero-text-area p {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.hero-text-area a {
+  background-color: var(--accent-color);
+  padding: 10px 35px;
+  border-radius: 25px;
+}
+.hero-text-area a:hover {
+  background-color: #38d3c5;
+}
+
+#footer {
+  text-align: center;
+  padding: 25px;
+}
+#footer .social-links i {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+  border: grey 1px solid;
+  border-radius: 100px;
+}
+#footer .social-links a i:hover {
+  color: var(--accent-color);
+  border: var(--accent-color) 1px solid;
+}
+
+/* =========================================
+   ✅ WORKING DROPDOWN STYLES
+   ========================================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--surface-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 9999;
+  margin-top: 10px;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--default-color) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  padding-left: 25px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

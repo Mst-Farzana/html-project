@@ -1,0 +1,415 @@
+:root {
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #222222;
+  --accent-color: #34b7a7;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(
+    --default-color
+  ); /* ✅ 'black' এর বদলে ভেরিয়েবল ব্যবহার করা হয়েছে */
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+/* =========================================
+   NAVIGATION & DROPDOWN STYLES
+   ========================================= */
+.nav-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.nav-menu-item ul {
+  display: flex;
+}
+.nav-menu-item ul li {
+  display: flex;
+  position: relative;
+  margin-right: 10px;
+}
+.nav-menu-item ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
+.nav-menu-item ul li a:hover,
+.nav-menu-item ul li a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: var(--accent-color);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.header {
+  color: var(--default-color);
+  background-color: #e9e8e6;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+.header-social-links .btn {
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.header-social-links .btn i {
+  background-color: #e9e8e6;
+  padding: 5px;
+}
+/* ✅ FIXED: Removed extra space before :hover */
+.header .header-social-links .btn:hover {
+  color: var(--accent-color);
+}
+
+/* ✅ WORKING DROPDOWN STYLES (Added) */
+.dropdown {
+  position: relative;
+}
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--surface-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 9999;
+  margin-top: 10px;
+}
+.dropdown-menu.show {
+  display: block !important;
+  animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--default-color) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.dropdown-menu li a:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  padding-left: 25px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   ABOUT SECTION STYLES
+   ========================================= */
+.about-section-title {
+  text-align: center;
+  color: #34b7a7;
+  margin: 30px;
+}
+.about-section-title h2 {
+  border-bottom: 3px var(--accent-color) solid;
+  display: inline;
+  padding: 10px;
+  margin: 20px;
+  font-size: 1.5rem;
+}
+.about-section-title p {
+  margin: 30px;
+}
+.about-main {
+  display: flex;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+}
+.about-img {
+  padding: 25px;
+  margin-left: 30px;
+}
+.about-main-right {
+  margin: 20px;
+  margin-left: 0px;
+  flex: 1;
+}
+.main-right-middle {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+}
+.about-main-right-left,
+.about-main-right-right {
+  flex: 0.5;
+  min-width: 250px;
+}
+.about-main-right i {
+  color: #34b7a7;
+  margin-right: 5px;
+  font-size: 1.5rem;
+}
+.about-main-right li {
+  margin-top: 10px;
+}
+.about-main-right ul {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.about-main-right p {
+  margin-top: 30px;
+  font-size: 15px;
+  text-align: justify;
+  font-family: sans-serif;
+}
+
+/* =========================================
+   SKILLS & PROGRESS BAR STYLES (FIXED)
+   ========================================= */
+.Skills-Item {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 15px;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+}
+.skills-content-left,
+.skills-content-right {
+  flex: 0.5;
+  margin: 10px;
+  padding: 5px;
+  min-width: 300px;
+}
+
+/* ✅ FIXED: Progress bar spacing to prevent overlap */
+.Skills-Item li {
+  position: relative;
+  margin: 0 0 35px 0; /* ✅ নিচের আইটেমের সাথে গ্যাপ বাড়ানো হয়েছে */
+  flex: 0.5;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px; /* ✅ টেক্সট এবং প্রগ্রেস বারের মাঝখানে গ্যাপ */
+}
+
+/* ✅ FIXED: 'top' value increased to clear the text completely */
+.skills-content-left li::before,
+.skills-content-right li::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(170, 167, 173);
+  width: 100%;
+  height: 10px;
+  top: 35px; /* ✅ 5px থেকে 35px করা হয়েছে যাতে টেক্সটের নিচে থাকে */
+  left: 0;
+  border-radius: 5px;
+}
+
+.skills-content-left li::after,
+.skills-content-right li::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  width: 0;
+  height: 10px;
+  top: 35px; /* ✅ before এর সাথে মিল রেখে 35px করা হয়েছে */
+  left: 0;
+  border-radius: 5px;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: forward; /* ✅ FIXED: 'forword' টাইপো ঠিক করা হয়েছে */
+  animation-fill-mode: forwards;
+}
+
+/* Keyframes (অপরিবর্তিত) */
+.skills-content-left li.html::after {
+  animation-name: html;
+}
+@keyframes html {
+  to {
+    width: 100%;
+  }
+}
+
+.skills-content-left li.css::after {
+  animation-name: css;
+}
+@keyframes css {
+  to {
+    width: 90%;
+  }
+}
+
+.skills-content-left li.javascript::after {
+  animation-name: javascript;
+}
+@keyframes javascript {
+  to {
+    width: 75%;
+  }
+}
+
+.skills-content-right li.php::after {
+  animation-name: php;
+}
+@keyframes php {
+  to {
+    width: 80%;
+  }
+}
+
+.skills-content-right li.wordpress::after {
+  animation-name: wordpress;
+}
+@keyframes wordpress {
+  to {
+    width: 90%;
+  }
+}
+
+.skills-content-right li.photoshop::after {
+  animation-name: photoshop;
+}
+@keyframes photoshop {
+  to {
+    width: 55%;
+  }
+}
+
+/* =========================================
+   STATS & TESTIMONIALS STYLES
+   ========================================= */
+.section-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+}
+.section-content p {
+  padding: 1rem;
+}
+.section-content h2 {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.side-bar-item {
+  text-align: center;
+}
+.testimonial-img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 50%; /* ✅ ছবি গোল করার জন্য */
+}
+.stars i {
+  color: #ffc107;
+  margin: 25px auto;
+}
+.side-bar-item p {
+  text-align: center;
+  padding: 10px 30px;
+  font-style: italic;
+}
+
+.side-bar-page {
+  margin: 5px auto;
+  text-align: center;
+  color: #8c8c8a;
+}
+.side-bar-page i {
+  padding: 5px;
+  text-align: center;
+  color: #8c8c8a;
+  cursor: pointer;
+}
+.side-bar-page i:hover {
+  color: var(--accent-color);
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+#footer {
+  text-align: center;
+  padding: 25px;
+}
+#footer .social-links i {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  background: white;
+  box-sizing: border-box;
+  border: grey 1px solid;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+#footer .social-links a i:hover {
+  color: var(--accent-color);
+  border: var(--accent-color) 1px solid;
+}

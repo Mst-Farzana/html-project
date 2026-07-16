@@ -1,0 +1,198 @@
+:root {
+  --default-font: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --heading-font: 'Raleway', sans-serif;
+  --nav-font: 'Poppins', sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #222222;
+  --accent-color: #34b7a7;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+:root {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+.nav-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.nav-menu-item ul {
+  display: flex;
+}
+.nav-menu-item ul li {
+  display: flex;
+  position: relative;
+  margin-right: 10px;
+}
+
+.nav-menu-item ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-menu-item ul li a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: underline;
+  color: var(--accent-color);
+  vertical-align: bottom;
+  text-underline-offset: 10px;
+  text-decoration: underlinevar(--accent-color);
+  cursor: pointer;
+}
+.nav-menu-item ul li a:focus {
+  text-decoration: underline;
+  color: var(--accent-color);
+  vertical-align: bottom;
+  text-underline-offset: 10px;
+  text-decoration: underlinevar(--accent-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+.header {
+  color: var(--default-color);
+  background-color: #e9e8e6;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+
+.header-social-links .btn {
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+  border: none;
+}
+.header-social-links .btn i {
+  background-color: #e9e8e6;
+  padding: 5px;
+}
+
+.header .header-social-links .btn :hover {
+  color: var(--accent-color);
+  padding: 5px;
+}
+/*header end*/
+/*main start*/
+#portfolio-details {
+  margin: 10px;
+  padding: 10px;
+}
+.container-section-title {
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+.hr-line hr {
+  border-bottom: 4px var(--accent-color) solid;
+  border-top: none;
+  height: 1px;
+  width: 50px;
+  margin: 10px auto;
+}
+.container-details {
+  display: flex;
+  margin: 0.5rem;
+  width: 90%;
+  height: 500px;
+}
+.slide-img {
+  flex-basis: 70%;
+}
+.swiper-wrapper {
+  position: relative;
+}
+.swiper-slide {
+  position: absolute;
+}
+.aside-details {
+  flex-basis: 30%;
+  padding: 2px;
+}
+.portfolio-info {
+  margin: 5px auto;
+}
+.side-bar-page {
+  margin-top: -8rem;
+  text-align: center;
+  width: 60%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.side-bar-page i {
+  padding: 5px;
+  text-align: center;
+  color: #8c8c8a;
+}
+
+.side-bar-page i:hover {
+  color: var(--accent-color);
+}
+.clear-div {
+  clear: both;
+}
+.portfolio-info {
+  box-shadow: #e9e8e6 1px 2px 4px 2px;
+  padding: 25px;
+}
+.portfolio-description {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/*footer start*/
+#footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #e9e8e6;
+}
+#footer .social-links i {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  background: #e9e8e6;
+  box-sizing: border-box;
+  border: grey 1px solid;
+  border-radius: 100px;
+}
+#footer .social-links a i:hover {
+  color: var(--accent-color);
+  border: var(--accent-color) 1px solid;
+}
+
+/*footer end*/

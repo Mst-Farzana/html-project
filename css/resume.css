@@ -1,0 +1,297 @@
+:root {
+  --default-font:
+    "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+:root {
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #222222;
+  --accent-color: #34b7a7;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+}
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: var(
+    --default-color
+  ); /* ✅ FIXED: Changed from 'black' to var for theme consistency */
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+/* =========================================
+   NAVIGATION & DROPDOWN STYLES
+   ========================================= */
+.nav-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.nav-menu-item ul {
+  display: flex;
+}
+.nav-menu-item ul li {
+  display: flex;
+  position: relative;
+  margin-right: 10px;
+}
+.nav-menu-item ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
+.nav-menu-item ul li a:hover,
+.nav-menu-item ul li a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: var(--accent-color);
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.header {
+  color: var(--default-color);
+  background-color: #e9e8e6;
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+}
+
+.header .header-social-links {
+  padding-right: 15px;
+}
+.header-social-links .btn {
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.header-social-links .btn i {
+  background-color: #e9e8e6;
+  padding: 5px;
+}
+/* ✅ FIXED: Removed extra space before :hover */
+.header-social-links .btn:hover {
+  color: var(--accent-color);
+}
+
+/* ✅ WORKING DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+}
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--surface-color);
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 9999;
+  margin-top: 10px;
+}
+.dropdown-menu.show {
+  display: block !important;
+  animation: fadeIn 0.2s ease-in-out;
+}
+.dropdown-menu li {
+  display: block;
+  margin: 0;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--default-color) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.dropdown-menu li a:hover {
+  background-color: var(--accent-color);
+  color: #ffffff !important;
+  padding-left: 25px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESUME SECTION STYLES
+   ========================================= */
+.container-section-title {
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+/* ✅ FIXED: 'h2 p' is invalid HTML, separated them */
+.container-section-title h2 {
+  margin-bottom: 10px;
+}
+.container-section-title p {
+  margin: 10px auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.hr-line hr {
+  border-bottom: 4px var(--accent-color) solid;
+  border-top: none;
+  height: 1px;
+  width: 50px;
+  margin: 10px auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Added for mobile responsiveness */
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.left-site,
+.right-site {
+  flex: 1 1 400px; /* ✅ Responsive: Takes 50% on desktop, 100% on mobile */
+}
+
+.left-site h3,
+.right-site h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+}
+
+.border-circle i {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.resume-item {
+  margin-bottom: 30px;
+}
+
+.header-style {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: var(--heading-color);
+}
+
+.resume-item-style {
+  border-left: 2px solid var(--accent-color);
+  margin-left: 7px;
+  padding: 15px 20px;
+  background-color: rgba(
+    52,
+    183,
+    167,
+    0.05
+  ); /* ✅ Subtle background for better readability */
+  border-radius: 0 8px 8px 0;
+}
+
+.resume-item-style h5 {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.resume-item-style p {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: var(--default-color);
+}
+
+.resume-item-style ul {
+  margin-top: 10px;
+  padding-left: 10px;
+}
+
+.resume-item-style li {
+  list-style: disc; /* ✅ Changed from circle to disc for better readability */
+  list-style-position: inside;
+  color: var(--default-color);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   FOOTER STYLES
+   ========================================= */
+#footer {
+  text-align: center;
+  padding: 25px;
+  background: #e9e8e6;
+}
+
+#footer .social-links i {
+  font-size: 20px;
+  margin: 10px;
+  padding: 15px;
+  background: #ffffff; /* ✅ Changed to white for better contrast */
+  box-sizing: border-box;
+  border: grey 1px solid;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+#footer .social-links a i:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}

@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio - Kelly Adams | Professional Illustrator</title>
+
+    <!-- ✅ SEO Meta Tags (Filled for Portfolio Page) -->
+    <meta
+      name="description"
+      content="Explore the creative portfolio of Kelly Adams. View projects in App Design, Product Branding, and Web Development."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, illustrator, web design, app design, branding, Kelly Adams, creative projects"
+    />
+    <meta name="author" content="Kelly Adams" />
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- ✅ Optimized Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Style CSS File -->
+    <link rel="stylesheet" href="css/portfolio.css" />
+
+    <!-- ✅ JavaScript for Dropdown (with defer for better performance) -->
+    <script src="js/index.js" defer></script>
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header">
+      <div class="nav-main-top">
+        <div class="nav-side-heding">
+          <a href="index.html" aria-label="Go to Home">
+            <h1 class="sitename">Kelly</h1>
+          </a>
+        </div>
+
+        <nav class="nav-menu-item" aria-label="Main Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="services.html">Services</a></li>
+            <!-- ✅ Active class moved to Portfolio -->
+            <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
+
+            <!-- ✅ WORKING DROPDOWN STRUCTURE -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-btn"> Dropdown <i class="fa-solid fa-caret-down"></i> </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- ✅ Fixed Social Links (Proper anchor tags instead of broken buttons) -->
+        <div class="header-social-links">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Twitter"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a
+            href="https://facebook.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <!-- Section Title -->
+        <div class="container-section-title">
+          <h2>Portfolio</h2>
+          <span class="hr-line"><hr /></span>
+          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+
+        <div class="container">
+          <div class="isotope-layout">
+            <ul class="portfolio-filters">
+              <li class="filter-active">All</li>
+              <li class="filter-app">App</li>
+              <li class="filter-product">Card</li>
+              <li class="filter-branding">Web</li>
+            </ul>
+          </div>
+
+          <div class="isotope-container">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-img-item">
+              <!-- ✅ Fixed: Removed 'px' from width/height attributes -->
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-1.jpg"
+                alt="App Design Project 1"
+                width="400"
+                height="500"
+              />
+              <!-- ✅ Fixed: Changed duplicate id="hidden-icon" to class="hidden-icon" -->
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>App 1</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-2.jpg"
+                alt="Product Design Project 1"
+                width="400"
+                height="300"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-3.jpg"
+                alt="Branding Project 1"
+                width="400"
+                height="600"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-4.jpg"
+                alt="App Design Project 2"
+                width="400"
+                height="500"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>App 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 5 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-5.jpg"
+                alt="Product Design Project 2"
+                width="400"
+                height="800"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Product 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 6 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-6.jpg"
+                alt="Branding Project 2"
+                width="400"
+                height="600"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Branding 2</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 7 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-7.jpg"
+                alt="App Design Project 3"
+                width="400"
+                height="500"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>App 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 8 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-8.jpg"
+                alt="Product Design Project 3"
+                width="400"
+                height="300"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Product 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Item 9 -->
+            <div class="portfolio-img-item">
+              <img
+                src="img/masonry-portfolio/masonry-portfolio-9.jpg"
+                alt="Branding Project 3"
+                width="400"
+                height="600"
+              />
+              <div class="portfolio-info hidden-icon">
+                <div class="hidden-header">
+                  <h4>Branding 3</h4>
+                  <p>Lorem ipsum, dolor sit</p>
+                </div>
+                <div class="zoom-icon">
+                  <a href="img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 3"
+                    ><i class="fa-solid fa-magnifying-glass"></i
+                  ></a>
+                  <a href="portfolio-details.html" title="More Details" class="details-link"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer light-background">
+      <div class="footer-container">
+        <div class="copyright-text">
+          <p>
+            &copy; <span id="current-year">2024</span> <strong class="px-1 sitename">Kelly</strong>.
+            All Rights Reserved.
+          </p>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            ><i class="fa-brands fa-square-twitter"></i
+          ></a>
+          <a
+            href="https://facebook.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            ><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <!-- ✅ Fixed broken HTML tag for ThemeWagon -->
+        <div class="credits">
+          Designed by
+          <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> |
+          Distributed by
+          <a href="https://themewagon.com" target="_blank" rel="noopener">ThemeWagon</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true"></div>
+
+    <!-- ✅ Auto-update copyright year script -->
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
