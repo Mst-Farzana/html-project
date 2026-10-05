@@ -125,14 +125,13 @@
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem">
+        <div class="container about-container">
           <div class="about-main">
             <div class="about-img">
               <img
                 src="img/profile-img.jpg"
                 alt="Profile picture of Kelly Adams"
                 width="300"
-                height="auto"
               />
             </div>
             <div class="about-main-right">
@@ -241,23 +240,35 @@
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <div class="section-content">
-          <div class="about-section-title">
-            <h2 class="animation-count">232</h2>
+        <div class="facts-grid">
+          <article class="fact-card">
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
+            <h3 class="fact-number" aria-label="232 clients">
+              <span data-count="232" aria-hidden="true">0</span>
+            </h3>
             <p>Clients</p>
-          </div>
-          <div class="about-section-title">
-            <h2>521</h2>
+          </article>
+          <article class="fact-card">
+            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+            <h3 class="fact-number" aria-label="521 projects">
+              <span data-count="521" aria-hidden="true">0</span>
+            </h3>
             <p>Projects</p>
-          </div>
-          <div class="about-section-title">
-            <h2>1453</h2>
-            <p>Hours Of Support</p>
-          </div>
-          <div class="about-section-title">
-            <h2>32</h2>
-            <p>Workers</p>
-          </div>
+          </article>
+          <article class="fact-card">
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <h3 class="fact-number" aria-label="1,453 hours of support">
+              <span data-count="1453" aria-hidden="true">0</span>
+            </h3>
+            <p>Hours of Support</p>
+          </article>
+          <article class="fact-card">
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            <h3 class="fact-number" aria-label="32 team members">
+              <span data-count="32" aria-hidden="true">0</span>
+            </h3>
+            <p>Team Members</p>
+          </article>
         </div>
       </section>
 
@@ -268,7 +279,9 @@
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <div id="saul-goodman" class="side-bar-item">
+        <div class="testimonial-carousel" role="region" aria-label="Client testimonials">
+          <div class="testimonial-slides" aria-live="off">
+        <div id="saul-goodman" class="side-bar-item testimonial-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 5">
           <div class="testimonial-item">
             <img
               src="img/testimonials/testimonials-1.png"
@@ -295,7 +308,7 @@
           </div>
         </div>
 
-        <div id="Sara-Wilsson" class="side-bar-item hidden-item">
+        <div id="Sara-Wilsson" class="side-bar-item testimonial-slide" role="group" aria-roledescription="slide" aria-label="2 of 5" hidden>
           <div class="testimonial-item">
             <img
               src="img/testimonials/testimonials-2.png"
@@ -322,7 +335,7 @@
           </div>
         </div>
 
-        <div id="Jena-Karlis" class="side-bar-item hidden-item">
+        <div id="Jena-Karlis" class="side-bar-item testimonial-slide" role="group" aria-roledescription="slide" aria-label="3 of 5" hidden>
           <div class="testimonial-item">
             <img
               src="img/testimonials/testimonials-3.png"
@@ -349,7 +362,7 @@
           </div>
         </div>
 
-        <div id="Matt-Brandon" class="side-bar-item hidden-item">
+        <div id="Matt-Brandon" class="side-bar-item testimonial-slide" role="group" aria-roledescription="slide" aria-label="4 of 5" hidden>
           <div class="testimonial-item">
             <img
               src="img/testimonials/testimonials-4.png"
@@ -376,7 +389,7 @@
           </div>
         </div>
 
-        <div id="John-Larson" class="side-bar-item hidden-item">
+        <div id="John-Larson" class="side-bar-item testimonial-slide" role="group" aria-roledescription="slide" aria-label="5 of 5" hidden>
           <div class="testimonial-item">
             <img
               src="img/testimonials/testimonials-5.png"
@@ -403,22 +416,14 @@
           </div>
         </div>
 
-        <div class="side-bar-page">
-          <a href="#saul-goodman" aria-label="Go to Saul Goodman"
-            ><i class="fa-solid fa-circle"></i
-          ></a>
-          <a href="#Sara-Wilsson" aria-label="Go to Sara Wilsson"
-            ><i class="fa-solid fa-circle"></i
-          ></a>
-          <a href="#Jena-Karlis" aria-label="Go to Jena Karlis"
-            ><i class="fa-solid fa-circle"></i
-          ></a>
-          <a href="#Matt-Brandon" aria-label="Go to Matt Brandon"
-            ><i class="fa-solid fa-circle"></i
-          ></a>
-          <a href="#John-Larson" aria-label="Go to John Larson"
-            ><i class="fa-solid fa-circle"></i
-          ></a>
+          </div>
+          <div class="side-bar-page" role="group" aria-label="Choose a testimonial">
+            <button type="button" class="is-active" aria-label="Show Saul Goodman testimonial" aria-pressed="true"></button>
+            <button type="button" aria-label="Show Sara Wilsson testimonial" aria-pressed="false"></button>
+            <button type="button" aria-label="Show Jena Karlis testimonial" aria-pressed="false"></button>
+            <button type="button" aria-label="Show Matt Brandon testimonial" aria-pressed="false"></button>
+            <button type="button" aria-label="Show John Larson testimonial" aria-pressed="false"></button>
+          </div>
         </div>
       </section>
     </main>

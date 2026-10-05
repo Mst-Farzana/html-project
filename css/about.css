@@ -220,7 +220,7 @@ h6 {
 }
 
 /* Skills and progress bars */
-.Skills-Item {
+.skills-item {
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -235,7 +235,7 @@ h6 {
   min-width: 300px;
 }
 
-.Skills-Item li {
+.skills-item li {
   position: relative;
   margin: 0 0 35px 0;
   flex: 0.5;
@@ -247,8 +247,8 @@ h6 {
   margin-bottom: 10px;
 }
 
-.skills-content-left li::before,
-.skills-content-right li::before {
+.skills-item .skills-content-left li::before,
+.skills-item .skills-content-right li::before {
   content: "";
   position: absolute;
   background-color: rgb(170, 167, 173);
@@ -259,8 +259,8 @@ h6 {
   border-radius: 5px;
 }
 
-.skills-content-left li::after,
-.skills-content-right li::after {
+.skills-item .skills-content-left li::after,
+.skills-item .skills-content-right li::after {
   content: "";
   position: absolute;
   background-color: var(--accent-color);
@@ -348,35 +348,279 @@ h6 {
 .side-bar-item {
   text-align: center;
 }
+
+.testimonial-carousel {
+  width: min(100% - 2rem, 900px);
+  margin: 0 auto;
+}
+
+.testimonial-slide {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--surface-color);
+  border: 1px solid rgba(34, 34, 34, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 0.75rem 2rem rgba(34, 34, 34, 0.06);
+}
+
+.testimonial-slide[hidden] {
+  display: none;
+}
+
+.testimonial-slide.is-active {
+  animation: testimonial-enter 0.45s ease both;
+}
+
+@keyframes testimonial-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .testimonial-img {
   display: block;
   margin: auto;
   margin-bottom: 20px;
   border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  box-shadow: 0 0.5rem 1.5rem rgba(34, 34, 34, 0.14);
 }
+
+.testimonial-item h3 {
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-item h4 {
+  color: #777777;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 .stars i {
   color: #ffc107;
-  margin: 25px auto;
+  margin: 1.25rem 0.15rem;
 }
+
 .side-bar-item p {
   text-align: center;
-  padding: 10px 30px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0.5rem 0 0;
   font-style: italic;
+  line-height: 1.7;
 }
 
 .side-bar-page {
-  margin: 5px auto;
+  display: flex;
+  justify-content: center;
+  gap: 0.65rem;
+  margin: 1.25rem auto 0;
   text-align: center;
   color: #8c8c8a;
 }
-.side-bar-page i {
-  padding: 5px;
-  text-align: center;
-  color: #8c8c8a;
+
+.side-bar-page button {
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #c5cecd;
   cursor: pointer;
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
-.side-bar-page i:hover {
+
+.side-bar-page button:hover {
+  transform: scale(1.15);
+}
+
+.side-bar-page button.is-active {
+  width: 2rem;
+  border-radius: 999px;
+  background: var(--accent-color);
+}
+
+.side-bar-page button:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 4px;
+}
+
+.about-container {
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding-block: clamp(1rem, 3vw, 2.5rem);
+}
+
+.about-main {
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  width: 100%;
+}
+
+.about-img {
+  flex: 0 1 320px;
+  margin: 0;
+}
+
+.about-img img {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 38vw, 420px);
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2.5rem rgba(34, 34, 34, 0.14);
+}
+
+.about-main-right {
+  min-width: 0;
+}
+
+.about-main-right h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.25;
+}
+
+.about-main-right-left,
+.about-main-right-right {
+  flex: 1 1 220px;
+}
+
+.about-main-right li {
+  overflow-wrap: anywhere;
+}
+
+.skills-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  width: min(100% - 2rem, 1200px);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.skills-content-left,
+.skills-content-right {
+  flex: 1 1 300px;
+  min-width: 0;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  width: min(100% - 2rem, 1200px);
+  margin: 0 auto;
+}
+
+.fact-card {
+  padding: clamp(1.25rem, 3vw, 2rem) 1rem;
+  text-align: center;
+  background: var(--surface-color);
+  border: 1px solid rgba(34, 34, 34, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 0.75rem 2rem rgba(34, 34, 34, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(52, 183, 167, 0.4);
+  box-shadow: 0 1rem 2.5rem rgba(34, 34, 34, 0.1);
+}
+
+.fact-card > i {
+  display: inline-grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
   color: var(--accent-color);
+  background: rgba(52, 183, 167, 0.12);
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.fact-number {
+  margin: 0.9rem 0 0.35rem;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.fact-card p {
+  margin: 0;
+  color: var(--default-color);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .facts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-main {
+    flex-direction: column;
+  }
+
+  .about-img {
+    flex-basis: auto;
+    width: min(100%, 320px);
+    padding: 0;
+  }
+
+  .about-main-right {
+    margin: 0;
+  }
+
+  .facts-grid {
+    width: calc(100% - 2rem);
+    gap: 0.75rem;
+  }
+
+  .fact-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .testimonial-carousel {
+    width: calc(100% - 2rem);
+  }
+
+  .testimonial-slide {
+    padding: 1.25rem;
+  }
+
+  .side-bar-item p {
+    padding-inline: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fact-card,
+  .side-bar-page button {
+    transition: none;
+  }
+
+  .testimonial-slide.is-active {
+    animation: none;
+  }
 }
 
 /* Footer */
