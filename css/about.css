@@ -221,113 +221,67 @@ h6 {
 
 /* Skills and progress bars */
 .skills-item {
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
-  padding: 15px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  width: min(100% - 2rem, 1200px);
+  margin: 0 auto;
+  padding: 1rem;
 }
 .skills-content-left,
 .skills-content-right {
-  flex: 0.5;
-  margin: 10px;
-  padding: 5px;
-  min-width: 300px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .skills-item li {
-  position: relative;
-  margin: 0 0 35px 0;
-  flex: 0.5;
+  margin: 0 0 1.5rem;
 }
 
 .list-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
 
-.skills-item .skills-content-left li::before,
-.skills-item .skills-content-right li::before {
-  content: "";
-  position: absolute;
-  background-color: rgb(170, 167, 173);
+.skill-progress {
+  display: block;
   width: 100%;
-  height: 10px;
-  top: 35px;
-  left: 0;
-  border-radius: 5px;
+  height: 0.65rem;
+  overflow: hidden;
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background-color: #e6e9e8;
+  animation: skill-reveal 0.9s ease-out both;
 }
 
-.skills-item .skills-content-left li::after,
-.skills-item .skills-content-right li::after {
-  content: "";
-  position: absolute;
+.skill-progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background-color: #e6e9e8;
+}
+
+.skill-progress::-webkit-progress-value {
+  border-radius: 999px;
   background-color: var(--accent-color);
-  width: 0;
-  height: 10px;
-  top: 35px;
-  left: 0;
-  border-radius: 5px;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
-/* Skill bar animations */
-.skills-content-left li.html::after {
-  animation-name: html;
+.skill-progress::-moz-progress-bar {
+  border-radius: 999px;
+  background-color: var(--accent-color);
 }
-@keyframes html {
-  to {
-    width: 100%;
+
+@keyframes skill-reveal {
+  from {
+    clip-path: inset(0 100% 0 0 round 999px);
   }
-}
-
-.skills-content-left li.css::after {
-  animation-name: css;
-}
-@keyframes css {
   to {
-    width: 90%;
-  }
-}
-
-.skills-content-left li.javascript::after {
-  animation-name: javascript;
-}
-@keyframes javascript {
-  to {
-    width: 75%;
-  }
-}
-
-.skills-content-right li.php::after {
-  animation-name: php;
-}
-@keyframes php {
-  to {
-    width: 80%;
-  }
-}
-
-.skills-content-right li.wordpress::after {
-  animation-name: wordpress;
-}
-@keyframes wordpress {
-  to {
-    width: 90%;
-  }
-}
-
-.skills-content-right li.photoshop::after {
-  animation-name: photoshop;
-}
-@keyframes photoshop {
-  to {
-    width: 55%;
+    clip-path: inset(0 0 0 0 round 999px);
   }
 }
 
@@ -500,8 +454,9 @@ h6 {
 }
 
 .skills-item {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: clamp(1rem, 3vw, 2.5rem);
   width: min(100% - 2rem, 1200px);
   margin: 0 auto;
@@ -510,7 +465,6 @@ h6 {
 
 .skills-content-left,
 .skills-content-right {
-  flex: 1 1 300px;
   min-width: 0;
   margin: 0;
   padding: 0.5rem;
@@ -545,13 +499,13 @@ h6 {
 
 .fact-card > i {
   display: inline-grid;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   place-items: center;
   color: var(--accent-color);
   background: rgba(52, 183, 167, 0.12);
   border-radius: 50%;
-  font-size: 1.2rem;
+  font-size: 1.65rem;
 }
 
 .fact-number {
@@ -590,6 +544,10 @@ h6 {
     margin: 0;
   }
 
+  .skills-item {
+    grid-template-columns: 1fr;
+  }
+
   .facts-grid {
     width: calc(100% - 2rem);
     gap: 0.75rem;
@@ -614,8 +572,10 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   .fact-card,
-  .side-bar-page button {
+  .side-bar-page button,
+  .skill-progress {
     transition: none;
+    animation: none;
   }
 
   .testimonial-slide.is-active {

@@ -58,7 +58,6 @@ img {
 .container,
 .container-details,
 .about-main,
-.Skills-Item,
 .isotope-container {
   max-width: 100%;
 }
@@ -164,8 +163,7 @@ img {
     flex-direction: column;
   }
 
-  .main-right-middle,
-  .Skills-Item {
+  .main-right-middle {
     gap: 1rem;
   }
 
