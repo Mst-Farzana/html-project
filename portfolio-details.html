@@ -24,6 +24,7 @@
 
   <!-- Style CSS File -->
   <link rel="stylesheet" href="css/portfolio-details.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/index.js"></script>
 </head>
 
@@ -35,27 +36,41 @@
           <h1 class=" sitename">Kelly</h1>
         </a>
       </div>
-      <div class="nav-menu-item">
+      <nav class="nav-menu-item" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="dropdown.html">Dropdown <i class="fa-solid fa-caret-down"></i></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-btn" aria-expanded="false">
+              Dropdown <i class="fa-solid fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Deep Dropdown 1</a></li>
+              <li><a href="#">Deep Dropdown 2</a></li>
+              <li><a href="#">Deep Dropdown 3</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-      </div>
+      </nav>
       <div class="header-social-links">
-
-        <button class="btn" onclick="window.open( 'link')" class="btn-request-callback"><i
-            class="fa-brands fa-square-twitter"></i></button>
-        <button class="btn" onclick="window.open( link)"><i class="fa-brands fa-square-facebook"></i></button>
-        <button class="btn" onclick="window.open(link)"><i class="fa-brands fa-square-instagram"></i></button>
-        <button class="btn" onclick="window.open(link)"><i class="fa-brands fa-linkedin"></i></button>
+        <a class="btn" href="https://twitter.com/yourusername" aria-label="Twitter"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a class="btn" href="https://facebook.com/yourusername" aria-label="Facebook"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+        <a class="btn" href="https://instagram.com/yourusername" aria-label="Instagram"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a class="btn" href="https://linkedin.com/in/yourusername" aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
-    </div>
     </div>
   </header>
   <!--  start portfolio details Section -->
@@ -137,14 +152,22 @@
         </p>
       </div>
       <div class="social-links">
-        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://twitter.com/yourusername" aria-label="Twitter"
+          ><i class="fa-brands fa-square-twitter"></i
+        ></a>
+        <a href="https://facebook.com/yourusername" aria-label="Facebook"
+          ><i class="fa-brands fa-square-facebook"></i
+        ></a>
+        <a href="https://instagram.com/yourusername" aria-label="Instagram"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
       <div>
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-          href=“https://themewagon.com>ThemeWagon
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> |
+        Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
       </div>
     </div>
 
@@ -152,12 +175,6 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
-
-  <!-- script -->
-
-  <script src="
-https://cdn.jsdelivr.net/npm/svg-icon@0.8.2/index.min.js
-"></script>
 
 </body>
 

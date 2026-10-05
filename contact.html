@@ -39,6 +39,7 @@
 
     <!-- Style CSS File -->
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <!-- ✅ JavaScript for Dropdown -->
     <script src="js/index.js" defer></script>
@@ -139,7 +140,7 @@
             </div>
             <div class="style-icon">
               <h3><i class="fa-regular fa-envelope"></i> Email Us</h3>
-              <p>info@example.com</p>
+              <p><a href="mailto:farzanap1531994@gmail.com">farzanap1531994@gmail.com</a></p>
             </div>
             <div class="map-container">
               <iframe
@@ -156,16 +157,34 @@
 
           <!-- Right Side: Contact Form -->
           <div class="right-side">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form
+              action="mailto:farzanap1531994@gmail.com"
+              method="post"
+              enctype="text/plain"
+              class="php-email-form"
+              data-recipient="farzanap1531994@gmail.com"
+            >
               <div class="form-part">
                 <div class="name-email">
                   <div class="input-item">
                     <label for="name-field">Your Name</label>
-                    <input type="text" name="name" id="name-field" required />
+                    <input
+                      type="text"
+                      name="name"
+                      id="name-field"
+                      autocomplete="name"
+                      required
+                    />
                   </div>
                   <div class="input-item">
                     <label for="email-field">Your Email</label>
-                    <input type="email" name="email" id="email-field" required />
+                    <input
+                      type="email"
+                      name="email"
+                      id="email-field"
+                      autocomplete="email"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -186,6 +205,7 @@
                 </div>
 
                 <button type="submit" class="btn">Send Message</button>
+                <p class="form-feedback" data-form-feedback role="status" aria-live="polite"></p>
               </div>
             </form>
           </div>

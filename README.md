@@ -18,6 +18,14 @@ A modern, fully responsive, and clean HTML/CSS template designed for creative pr
 - 🎨 **Easy to Customize:** Built with CSS Variables (`:root`) for quick color and font changes.
 - ⚡ **Performance Optimized:** Preconnected Google Fonts and optimized asset loading.
 
+## Contact form
+
+The contact form validates the required fields in the browser and opens a pre-filled
+message in the visitor's email application. Set the `data-recipient` value and the
+visible email link in `contact.html` to the address that should receive inquiries.
+The visitor must press **Send** in their email application; sending directly from
+the website requires a server-side handler or a configured form service.
+
 ---
 
 ## 🛠️ Technologies Used
