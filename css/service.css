@@ -25,7 +25,7 @@
   text-decoration: none;
   color: var(
     --default-color
-  ); /* ✅ FIXED: Changed from 'black' to var for theme consistency */
+  );
 }
 
 body {
@@ -34,9 +34,7 @@ body {
   font-family: var(--default-font);
 }
 
-/* =========================================
-   NAVIGATION & DROPDOWN STYLES
-   ========================================= */
+/* Navigation and dropdown */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -56,7 +54,6 @@ body {
   transition: 0.3s;
 }
 
-/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
 .nav-menu-item ul li a:hover,
 .nav-menu-item ul li a:focus {
   color: var(--accent-color);
@@ -104,12 +101,11 @@ h6 {
   background-color: #e9e8e6;
   padding: 5px;
 }
-/* ✅ FIXED: Removed extra space before :hover */
 .header-social-links .btn:hover {
   color: var(--accent-color);
 }
 
-/* ✅ WORKING DROPDOWN STYLES */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }
@@ -164,9 +160,7 @@ h6 {
   }
 }
 
-/* =========================================
-   SERVICES SECTION STYLES
-   ========================================= */
+/* Services section */
 .headr-container {
   margin: 30px auto;
   padding: 20px;
@@ -190,9 +184,9 @@ h6 {
   max-width: 1200px;
 }
 
-/* ✅ Modern Card Design with Hover Effect */
+/* Service cards */
 .style-svg {
-  flex: 1 1 300px; /* ✅ Responsive: Takes 300px min-width, wraps on mobile */
+  flex: 1 1 300px;
   background: #ffffff;
   border-radius: 12px;
   padding: 30px 20px;
@@ -207,7 +201,7 @@ h6 {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Perfect Icon Centering over SVG Blob */
+/* Service icons */
 .icon {
   position: relative;
   width: 100px;
@@ -227,7 +221,7 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* ✅ Perfectly centers the icon */
+  transform: translate(-50%, -50%);
   font-size: 2rem;
   color: var(--accent-color);
   transition: all 0.3s ease;
@@ -253,9 +247,7 @@ h6 {
   font-size: 0.95rem;
 }
 
-/* =========================================
-   FOOTER STYLES
-   ========================================= */
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;
@@ -266,7 +258,7 @@ h6 {
   font-size: 20px;
   margin: 10px;
   padding: 15px;
-  background: #ffffff; /* ✅ Changed to white for better contrast */
+  background: #ffffff;
   box-sizing: border-box;
   border: 1px solid grey;
   border-radius: 100px;

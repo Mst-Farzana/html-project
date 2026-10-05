@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portfolio - Kelly Adams | Professional Illustrator</title>
 
-    <!-- ✅ SEO Meta Tags (Filled for Portfolio Page) -->
+    <!-- Search engine metadata -->
     <meta
       name="description"
       content="Explore the creative portfolio of Kelly Adams. View projects in App Design, Product Branding, and Web Development."
@@ -20,7 +20,7 @@
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- ✅ Optimized Fonts -->
+    <!-- Font resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,11 +37,11 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Style CSS File -->
+    <!-- Page styles -->
     <link rel="stylesheet" href="css/portfolio.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
-    <!-- ✅ JavaScript for Dropdown (with defer for better performance) -->
+    <!-- Site interactions -->
     <script src="js/index.js" defer></script>
   </head>
 
@@ -60,10 +60,10 @@
             <li><a href="about.html">About</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="services.html">Services</a></li>
-            <!-- ✅ Active class moved to Portfolio -->
+            <!-- Current page -->
             <li><a href="portfolio.html" class="active" aria-current="page">Portfolio</a></li>
 
-            <!-- ✅ WORKING DROPDOWN STRUCTURE -->
+            <!-- Dropdown navigation -->
             <li class="dropdown">
               <a href="#" class="dropdown-btn"> Dropdown <i class="fa-solid fa-caret-down"></i> </a>
               <ul class="dropdown-menu">
@@ -79,7 +79,7 @@
           </ul>
         </nav>
 
-        <!-- ✅ Fixed Social Links (Proper anchor tags instead of broken buttons) -->
+        <!-- Social media links -->
         <div class="header-social-links">
           <a
             href="https://twitter.com/yourusername"
@@ -118,9 +118,9 @@
     </header>
 
     <main class="main">
-      <!-- Portfolio Section -->
+      <!-- Portfolio section -->
       <section id="portfolio" class="portfolio section">
-        <!-- Section Title -->
+        <!-- Section introduction -->
         <div class="container-section-title">
           <h2>Portfolio</h2>
           <span class="hr-line"><hr /></span>
@@ -130,24 +130,25 @@
         <div class="container">
           <div class="isotope-layout">
             <ul class="portfolio-filters">
-              <li class="filter-active">All</li>
-              <li class="filter-app">App</li>
-              <li class="filter-product">Card</li>
-              <li class="filter-branding">Web</li>
+              <li>
+                <button class="filter-active" type="button" data-filter="*" aria-pressed="true">
+                  All
+                </button>
+              </li>
+              <li><button type="button" data-filter="app" aria-pressed="false">App</button></li>
+              <li><button type="button" data-filter="product" aria-pressed="false">Card</button></li>
+              <li><button type="button" data-filter="branding" aria-pressed="false">Web</button></li>
             </ul>
           </div>
 
           <div class="isotope-container">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-img-item">
-              <!-- ✅ Fixed: Removed 'px' from width/height attributes -->
+            <div class="portfolio-img-item" data-category="app">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-1.jpg"
                 alt="App Design Project 1"
                 width="400"
                 height="500"
               />
-              <!-- ✅ Fixed: Changed duplicate id="hidden-icon" to class="hidden-icon" -->
               <div class="portfolio-info hidden-icon">
                 <div class="hidden-header">
                   <h4>App 1</h4>
@@ -164,8 +165,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 2 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="product">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-2.jpg"
                 alt="Product Design Project 1"
@@ -188,8 +188,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 3 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="branding">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-3.jpg"
                 alt="Branding Project 1"
@@ -212,8 +211,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 4 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="app">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-4.jpg"
                 alt="App Design Project 2"
@@ -236,8 +234,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 5 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="product">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-5.jpg"
                 alt="Product Design Project 2"
@@ -260,8 +257,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 6 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="branding">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-6.jpg"
                 alt="Branding Project 2"
@@ -284,8 +280,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 7 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="app">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-7.jpg"
                 alt="App Design Project 3"
@@ -308,8 +303,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 8 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="product">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-8.jpg"
                 alt="Product Design Project 3"
@@ -332,8 +326,7 @@
               </div>
             </div>
 
-            <!-- Portfolio Item 9 -->
-            <div class="portfolio-img-item">
+            <div class="portfolio-img-item" data-category="branding">
               <img
                 src="img/masonry-portfolio/masonry-portfolio-9.jpg"
                 alt="Branding Project 3"
@@ -399,7 +392,7 @@
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
-        <!-- ✅ Fixed broken HTML tag for ThemeWagon -->
+        <!-- Template credits -->
         <div class="credits">
           Designed by
           <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> |
@@ -412,7 +405,7 @@
     <!-- Preloader -->
     <div id="preloader" aria-hidden="true"></div>
 
-    <!-- ✅ Auto-update copyright year script -->
+    <!-- Update the copyright year -->
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>

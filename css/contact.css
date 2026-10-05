@@ -32,9 +32,7 @@ body {
   font-family: var(--default-font);
 }
 
-/* =========================================
-   NAVIGATION & DROPDOWN STYLES
-   ========================================= */
+/* Navigation and dropdown */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -104,9 +102,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/* =========================================
-   DROPDOWN STYLES
-   ========================================= */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }
@@ -161,9 +157,7 @@ h6 {
   }
 }
 
-/* =========================================
-   CONTACT SECTION - FULLY FIXED
-   ========================================= */
+/* Contact section */
 .container-section-title {
   margin: 30px auto;
   padding: 20px;
@@ -204,10 +198,10 @@ h6 {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* Left side - Contact Info */
+/* Contact details */
 .style-icon {
   display: flex;
-  align-items: center; /* ✅ আইকন এবং টেক্সট মাঝখানে অ্যালাইন */
+  align-items: center;
   gap: 20px;
   margin-bottom: 25px;
   padding: 15px 0;
@@ -255,7 +249,7 @@ h6 {
   transform: scale(1.1);
 }
 
-/* Right side - Form */
+/* Contact form */
 .name-email {
   display: flex;
   gap: 20px;
@@ -312,7 +306,7 @@ h6 {
   resize: vertical;
 }
 
-/* Submit Button */
+/* Submit button */
 .right-side .btn {
   background-color: var(--accent-color);
   border: none;
@@ -339,7 +333,7 @@ h6 {
   line-height: 1.5;
 }
 
-/* Mobile Responsive */
+/* Contact form mobile layout */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -373,9 +367,7 @@ h6 {
   }
 }
 
-/* =========================================
-   FOOTER STYLES
-   ========================================= */
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;

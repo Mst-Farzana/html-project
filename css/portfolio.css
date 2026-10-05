@@ -32,9 +32,7 @@ body {
   font-family: var(--default-font);
 }
 
-/* =========================================
-   NAVIGATION & DROPDOWN STYLES
-   ========================================= */
+/* Navigation and dropdown */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -54,7 +52,6 @@ body {
   transition: 0.3s;
 }
 
-/* ✅ FIXED: Invalid syntax corrected */
 .nav-menu-item ul li a:hover,
 .nav-menu-item ul li a:focus {
   color: var(--accent-color);
@@ -106,7 +103,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/* ✅ WORKING DROPDOWN STYLES */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }
@@ -161,9 +158,7 @@ h6 {
   }
 }
 
-/* =========================================
-   PORTFOLIO SECTION STYLES
-   ========================================= */
+/* Portfolio section */
 #portfolio {
   margin: 10px;
   padding: 10px;
@@ -183,7 +178,7 @@ h6 {
   margin: 10px auto;
 }
 
-/* Filter Buttons */
+/* Portfolio filters */
 .isotope-layout {
   text-align: center;
   margin-bottom: 30px;
@@ -194,7 +189,10 @@ h6 {
   flex-wrap: wrap;
   gap: 10px;
 }
-.isotope-layout ul li {
+.portfolio-filters button {
+  border: 0;
+  background: transparent;
+  font: inherit;
   margin: 0;
   padding: 10px 25px;
   border-radius: 25px;
@@ -203,13 +201,19 @@ h6 {
   color: var(--default-color);
 }
 
-.isotope-layout ul li:hover,
-.isotope-layout ul li.filter-active {
+.portfolio-filters button:hover,
+.portfolio-filters button:focus-visible,
+.portfolio-filters button.filter-active {
   background-color: var(--accent-color);
   color: #ffffff;
 }
 
-/* Portfolio Grid */
+.portfolio-filters button:focus-visible {
+  outline: 2px solid var(--heading-color);
+  outline-offset: 2px;
+}
+
+/* Portfolio grid */
 .isotope-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,7 +245,7 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(52, 183, 167, 0.85); /* ✅ Accent color with opacity */
+  background: rgba(52, 183, 167, 0.85);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,7 +297,7 @@ h6 {
   transform: scale(1.1);
 }
 
-/* ✅ Responsive Grid for Tablet and Mobile */
+/* Responsive portfolio grid */
 @media (max-width: 992px) {
   .isotope-container {
     grid-template-columns: repeat(2, 1fr);
@@ -309,9 +313,7 @@ h6 {
   }
 }
 
-/* =========================================
-   FOOTER STYLES
-   ========================================= */
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;

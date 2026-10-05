@@ -25,7 +25,7 @@
   text-decoration: none;
   color: var(
     --default-color
-  ); /* ✅ FIXED: Changed from 'black' to var for theme consistency */
+  );
 }
 
 body {
@@ -34,9 +34,7 @@ body {
   font-family: var(--default-font);
 }
 
-/* =========================================
-   NAVIGATION & DROPDOWN STYLES
-   ========================================= */
+/* Navigation and dropdown */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -56,7 +54,6 @@ body {
   transition: 0.3s;
 }
 
-/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
 .nav-menu-item ul li a:hover,
 .nav-menu-item ul li a:focus {
   color: var(--accent-color);
@@ -104,12 +101,11 @@ h6 {
   background-color: #e9e8e6;
   padding: 5px;
 }
-/* ✅ FIXED: Removed extra space before :hover */
 .header-social-links .btn:hover {
   color: var(--accent-color);
 }
 
-/* ✅ WORKING DROPDOWN STYLES */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }
@@ -164,15 +160,12 @@ h6 {
   }
 }
 
-/* =========================================
-   RESUME SECTION STYLES
-   ========================================= */
+/* Resume section */
 .container-section-title {
   margin: 30px auto;
   padding: 20px;
   text-align: center;
 }
-/* ✅ FIXED: 'h2 p' is invalid HTML, separated them */
 .container-section-title h2 {
   margin-bottom: 10px;
 }
@@ -192,7 +185,7 @@ h6 {
 
 .container {
   display: flex;
-  flex-wrap: wrap; /* ✅ Added for mobile responsiveness */
+  flex-wrap: wrap;
   margin: 30px auto;
   padding: 20px;
   max-width: 1200px;
@@ -201,7 +194,7 @@ h6 {
 
 .left-site,
 .right-site {
-  flex: 1 1 400px; /* ✅ Responsive: Takes 50% on desktop, 100% on mobile */
+  flex: 1 1 400px;
 }
 
 .left-site h3,
@@ -241,7 +234,7 @@ h6 {
     183,
     167,
     0.05
-  ); /* ✅ Subtle background for better readability */
+  );
   border-radius: 0 8px 8px 0;
 }
 
@@ -264,16 +257,14 @@ h6 {
 }
 
 .resume-item-style li {
-  list-style: disc; /* ✅ Changed from circle to disc for better readability */
+  list-style: disc;
   list-style-position: inside;
   color: var(--default-color);
   margin-bottom: 8px;
   line-height: 1.5;
 }
 
-/* =========================================
-   FOOTER STYLES
-   ========================================= */
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;
@@ -284,7 +275,7 @@ h6 {
   font-size: 20px;
   margin: 10px;
   padding: 15px;
-  background: #ffffff; /* ✅ Changed to white for better contrast */
+  background: #ffffff;
   box-sizing: border-box;
   border: grey 1px solid;
   border-radius: 100px;

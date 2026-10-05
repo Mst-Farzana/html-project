@@ -50,12 +50,11 @@ body {
 }
 
 .nav-menu-item ul li a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: underline;
   color: var(--accent-color);
   vertical-align: bottom;
   text-underline-offset: 10px;
-  text-decoration: underlinevar(--accent-color);
+  text-decoration-color: var(--accent-color);
   cursor: pointer;
 }
 .nav-menu-item ul li a:focus {
@@ -63,7 +62,7 @@ body {
   color: var(--accent-color);
   vertical-align: bottom;
   text-underline-offset: 10px;
-  text-decoration: underlinevar(--accent-color);
+  text-decoration-color: var(--accent-color);
 }
 
 h1,
@@ -107,8 +106,7 @@ h6 {
   color: var(--accent-color);
   padding: 5px;
 }
-/*header end*/
-/*main start*/
+/* Portfolio details */
 #portfolio-details {
   margin: 10px;
   padding: 10px;
@@ -175,7 +173,7 @@ h6 {
   margin-top: 2rem;
 }
 
-/*footer start*/
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;
@@ -194,5 +192,3 @@ h6 {
   color: var(--accent-color);
   border: var(--accent-color) 1px solid;
 }
-
-/*footer end*/

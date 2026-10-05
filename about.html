@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>About Me - Kelly Adams | Professional Illustrator</title>
 
-    <!-- ✅ SEO Meta Tags (Filled for About Page) -->
+    <!-- Search engine metadata -->
     <meta
       name="description"
       content="Learn more about Kelly Adams, a professional UI/UX Designer and Web Developer. Explore my skills, background, and client testimonials."
@@ -20,7 +20,7 @@
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- ✅ Optimized Fonts -->
+    <!-- Font resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,11 +37,11 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Style CSS File -->
+    <!-- Page styles -->
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
-    <!-- ✅ JavaScript for Dropdown -->
+    <!-- Site interactions -->
     <script src="js/index.js" defer></script>
   </head>
 
@@ -57,13 +57,13 @@
         <nav class="nav-menu-item" aria-label="Main Navigation">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <!-- ✅ Active class moved to About -->
+            <!-- Current page -->
             <li><a href="about.html" class="active" aria-current="page">About</a></li>
             <li><a href="resume.html">Resume</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
 
-            <!-- ✅ WORKING DROPDOWN STRUCTURE -->
+            <!-- Dropdown navigation -->
             <li class="dropdown">
               <a href="#" class="dropdown-btn"> Dropdown <i class="fa-solid fa-caret-down"></i> </a>
               <ul class="dropdown-menu">
@@ -74,13 +74,12 @@
                 <li><a href="#">Deep Dropdown 5</a></li>
               </ul>
             </li>
-            <!-- ✅ END DROPDOWN -->
 
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
-        <!-- ✅ Fixed Social Links (Proper anchor tags instead of broken buttons) -->
+        <!-- Social media links -->
         <div class="header-social-links">
           <a
             href="https://twitter.com/yourusername"
@@ -119,18 +118,16 @@
     </header>
 
     <main class="main">
-      <!-- About Section -->
+      <!-- About section -->
       <section id="about" class="about section">
         <div class="about-section-title">
           <h2>About</h2>
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <!-- ✅ Fixed inline style syntax -->
         <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem">
           <div class="about-main">
             <div class="about-img">
-              <!-- ✅ Fixed width attribute (removed 'px') -->
               <img
                 src="img/profile-img.jpg"
                 alt="Profile picture of Kelly Adams"
@@ -200,14 +197,13 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
+      <!-- Skills section -->
       <section id="skills" class="skills section">
         <div class="about-section-title">
           <h2>Skills</h2>
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <!-- ✅ Fixed class naming and removed extra closing div -->
         <div class="skills-item">
           <div class="skills-content-left">
             <ul>
@@ -238,14 +234,13 @@
         </div>
       </section>
 
-      <!-- Stats Section -->
+      <!-- Statistics section -->
       <section id="stats" class="stats section">
         <div class="about-section-title">
           <h2>Facts</h2>
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <!-- ✅ Fixed typo: aniation-count -> animation-count -->
         <div class="section-content">
           <div class="about-section-title">
             <h2 class="animation-count">232</h2>
@@ -266,14 +261,13 @@
         </div>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- Testimonials section -->
       <section id="testimonials" class="testimonials section">
         <div class="about-section-title">
           <h2>Testimonials</h2>
           <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
         </div>
 
-        <!-- ✅ Fixed duplicate class attributes -->
         <div id="saul-goodman" class="side-bar-item">
           <div class="testimonial-item">
             <img
@@ -409,7 +403,6 @@
           </div>
         </div>
 
-        <!-- ✅ Fixed broken link typo (#John-Larson r -> #John-Larson) -->
         <div class="side-bar-page">
           <a href="#saul-goodman" aria-label="Go to Saul Goodman"
             ><i class="fa-solid fa-circle"></i
@@ -469,7 +462,7 @@
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
-        <!-- ✅ Fixed broken HTML tag for ThemeWagon -->
+        <!-- Template credits -->
         <div class="credits">
           Designed by
           <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> |
@@ -482,7 +475,7 @@
     <!-- Preloader -->
     <div id="preloader" aria-hidden="true"></div>
 
-    <!-- ✅ Auto-update copyright year script -->
+    <!-- Update the copyright year -->
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>

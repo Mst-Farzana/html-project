@@ -161,9 +161,7 @@ h6 {
   border: var(--accent-color) 1px solid;
 }
 
-/* =========================================
-   ✅ WORKING DROPDOWN STYLES
-   ========================================= */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }

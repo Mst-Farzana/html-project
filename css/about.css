@@ -25,7 +25,7 @@
   text-decoration: none;
   color: var(
     --default-color
-  ); /* ✅ 'black' এর বদলে ভেরিয়েবল ব্যবহার করা হয়েছে */
+  );
 }
 
 body {
@@ -34,9 +34,7 @@ body {
   font-family: var(--default-font);
 }
 
-/* =========================================
-   NAVIGATION & DROPDOWN STYLES
-   ========================================= */
+/* Navigation and dropdown */
 .nav-main-top {
   display: flex;
   justify-content: space-between;
@@ -56,7 +54,6 @@ body {
   transition: 0.3s;
 }
 
-/* ✅ FIXED: Invalid syntax 'underlinevar' corrected */
 .nav-menu-item ul li a:hover,
 .nav-menu-item ul li a:focus {
   color: var(--accent-color);
@@ -104,12 +101,11 @@ h6 {
   background-color: #e9e8e6;
   padding: 5px;
 }
-/* ✅ FIXED: Removed extra space before :hover */
 .header .header-social-links .btn:hover {
   color: var(--accent-color);
 }
 
-/* ✅ WORKING DROPDOWN STYLES (Added) */
+/* Dropdown navigation */
 .dropdown {
   position: relative;
 }
@@ -164,9 +160,7 @@ h6 {
   }
 }
 
-/* =========================================
-   ABOUT SECTION STYLES
-   ========================================= */
+/* About section */
 .about-section-title {
   text-align: center;
   color: #34b7a7;
@@ -184,7 +178,7 @@ h6 {
 }
 .about-main {
   display: flex;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+  flex-wrap: wrap;
 }
 .about-img {
   padding: 25px;
@@ -199,7 +193,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   flex: 1;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+  flex-wrap: wrap;
 }
 .about-main-right-left,
 .about-main-right-right {
@@ -225,15 +219,13 @@ h6 {
   font-family: sans-serif;
 }
 
-/* =========================================
-   SKILLS & PROGRESS BAR STYLES (FIXED)
-   ========================================= */
+/* Skills and progress bars */
 .Skills-Item {
   display: flex;
   justify-content: space-between;
   flex: 1;
   padding: 15px;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+  flex-wrap: wrap;
 }
 .skills-content-left,
 .skills-content-right {
@@ -243,20 +235,18 @@ h6 {
   min-width: 300px;
 }
 
-/* ✅ FIXED: Progress bar spacing to prevent overlap */
 .Skills-Item li {
   position: relative;
-  margin: 0 0 35px 0; /* ✅ নিচের আইটেমের সাথে গ্যাপ বাড়ানো হয়েছে */
+  margin: 0 0 35px 0;
   flex: 0.5;
 }
 
 .list-item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px; /* ✅ টেক্সট এবং প্রগ্রেস বারের মাঝখানে গ্যাপ */
+  margin-bottom: 10px;
 }
 
-/* ✅ FIXED: 'top' value increased to clear the text completely */
 .skills-content-left li::before,
 .skills-content-right li::before {
   content: "";
@@ -264,7 +254,7 @@ h6 {
   background-color: rgb(170, 167, 173);
   width: 100%;
   height: 10px;
-  top: 35px; /* ✅ 5px থেকে 35px করা হয়েছে যাতে টেক্সটের নিচে থাকে */
+  top: 35px;
   left: 0;
   border-radius: 5px;
 }
@@ -276,18 +266,17 @@ h6 {
   background-color: var(--accent-color);
   width: 0;
   height: 10px;
-  top: 35px; /* ✅ before এর সাথে মিল রেখে 35px করা হয়েছে */
+  top: 35px;
   left: 0;
   border-radius: 5px;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-delay: 0.5s;
   animation-iteration-count: 1;
-  animation-direction: forward; /* ✅ FIXED: 'forword' টাইপো ঠিক করা হয়েছে */
   animation-fill-mode: forwards;
 }
 
-/* Keyframes (অপরিবর্তিত) */
+/* Skill bar animations */
 .skills-content-left li.html::after {
   animation-name: html;
 }
@@ -342,13 +331,11 @@ h6 {
   }
 }
 
-/* =========================================
-   STATS & TESTIMONIALS STYLES
-   ========================================= */
+/* Statistics and testimonials */
 .section-content {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap; /* ✅ মোবাইল রেসপন্সিভনেস */
+  flex-wrap: wrap;
 }
 .section-content p {
   padding: 1rem;
@@ -365,7 +352,7 @@ h6 {
   display: block;
   margin: auto;
   margin-bottom: 20px;
-  border-radius: 50%; /* ✅ ছবি গোল করার জন্য */
+  border-radius: 50%;
 }
 .stars i {
   color: #ffc107;
@@ -392,9 +379,7 @@ h6 {
   color: var(--accent-color);
 }
 
-/* =========================================
-   FOOTER STYLES
-   ========================================= */
+/* Footer */
 #footer {
   text-align: center;
   padding: 25px;

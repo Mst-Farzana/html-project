@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Resume - Kelly Adams | Professional Illustrator</title>
 
-    <!-- ✅ SEO Meta Tags (Filled for Resume Page) -->
+    <!-- Search engine metadata -->
     <meta
       name="description"
       content="View the professional resume and work experience of Kelly Adams, a skilled Graphic Designer and Web Developer."
@@ -20,7 +20,7 @@
     <link href="img/favicon.png" rel="icon" />
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-    <!-- ✅ Optimized Fonts -->
+    <!-- Font resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -37,11 +37,11 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- Style CSS File -->
+    <!-- Page styles -->
     <link rel="stylesheet" href="css/resume.css" />
     <link rel="stylesheet" href="css/responsive.css" />
 
-    <!-- ✅ JavaScript for Dropdown (with defer for better performance) -->
+    <!-- Site interactions -->
     <script src="js/index.js" defer></script>
   </head>
 
@@ -58,12 +58,12 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <!-- ✅ Active class moved to Resume -->
+            <!-- Current page -->
             <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
 
-            <!-- ✅ WORKING DROPDOWN STRUCTURE -->
+            <!-- Dropdown navigation -->
             <li class="dropdown">
               <a href="#" class="dropdown-btn"> Dropdown <i class="fa-solid fa-caret-down"></i> </a>
               <ul class="dropdown-menu">
@@ -79,7 +79,7 @@
           </ul>
         </nav>
 
-        <!-- ✅ Fixed Social Links (Proper anchor tags instead of broken buttons) -->
+        <!-- Social media links -->
         <div class="header-social-links">
           <a
             href="https://twitter.com/yourusername"
@@ -118,9 +118,9 @@
     </header>
 
     <main class="main">
-      <!-- Resume Section -->
+      <!-- Resume section -->
       <section id="resume" class="resume-section">
-        <!-- Section Title -->
+        <!-- Section introduction -->
         <div class="container-section-title">
           <h2>Resume</h2>
           <span class="hr-line"><hr /></span>
@@ -128,7 +128,7 @@
         </div>
 
         <div class="container">
-          <!-- Left Column: Summary & Education -->
+          <!-- Summary and education -->
           <div class="left-site">
             <h3 class="resume-title">Summary</h3>
             <div class="resume-item">
@@ -179,7 +179,7 @@
             </div>
           </div>
 
-          <!-- Right Column: Professional Experience -->
+          <!-- Professional experience -->
           <div class="right-site">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
@@ -212,7 +212,6 @@
             <div class="resume-item">
               <span class="border-circle"><i class="fa-regular fa-circle"></i></span>
               <h4 class="header-style">Graphic design specialist</h4>
-              <!-- ✅ FIXED: Moved </ul> inside the div to fix invalid HTML nesting -->
               <div class="resume-item-style">
                 <h5>2017 - 2018</h5>
                 <p><em>Stepping Stone Advertising, New York, NY</em></p>
@@ -234,13 +233,11 @@
             </div>
           </div>
         </div>
-        <!-- ✅ FIXED: Removed the extra closing </div> that was here -->
       </section>
     </main>
 
     <!-- Footer -->
     <footer id="footer" class="footer light-background">
-      <!-- ✅ FIXED: Typo in class name (footer-containerr -> footer-container) -->
       <div class="footer-container">
         <div class="copyright-text">
           <p>
@@ -278,7 +275,7 @@
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
-        <!-- ✅ FIXED: Broken HTML tag for ThemeWagon -->
+        <!-- Template credits -->
         <div class="credits">
           Designed by
           <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a> |
@@ -291,7 +288,7 @@
     <!-- Preloader -->
     <div id="preloader" aria-hidden="true"></div>
 
-    <!-- ✅ Auto-update copyright year script -->
+    <!-- Update the copyright year -->
     <script>
       document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>

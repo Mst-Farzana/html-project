@@ -47,4 +47,28 @@ document.addEventListener('DOMContentLoaded', function () {
         `&body=${encodeURIComponent(emailBody)}`;
     });
   }
+
+  const portfolioFilters = document.querySelector('.portfolio-filters');
+  const portfolioItems = document.querySelectorAll('.portfolio-img-item[data-category]');
+
+  if (portfolioFilters && portfolioItems.length > 0) {
+    portfolioFilters.addEventListener('click', function (event) {
+      const target = event.target;
+      if (!(target instanceof HTMLButtonElement) || !target.hasAttribute('data-filter')) {
+        return;
+      }
+
+      const selectedFilter = target.dataset.filter;
+
+      portfolioFilters.querySelectorAll('button[data-filter]').forEach(function (button) {
+        const isActive = button === target;
+        button.classList.toggle('filter-active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+
+      portfolioItems.forEach(function (item) {
+        item.hidden = selectedFilter !== '*' && item.dataset.category !== selectedFilter;
+      });
+    });
+  }
 });
